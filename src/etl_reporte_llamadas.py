@@ -36,10 +36,10 @@ def generate_report(datos):
     print(reporte.head())
     return reporte
 
-def save_data(reporte, filename):
+def save_data(reporte, filename, step='resumen'):
     # Guardar la tabla:
 
-    out_name = 'resumen_' + filename
+    out_name = step + '_' + filename
     out_path = os.path.join(root_dir, 'data', 'processed', out_name)
     reporte.to_csv(out_path)
 
